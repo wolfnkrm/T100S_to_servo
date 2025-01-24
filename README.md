@@ -2,7 +2,8 @@
 THIS PROJECT IS IN EXPERIMENTAL!!!. It still need practical testing and adjustments.
 
 This repo works by using T100S LED controller to get pattern data from LEDEDIT and translate the data via SPI protocol to microcontroller (in this case ESP32) that convert the RGB data to servo angle
-Using a **logic level shifter** to safely interface the **T1000S** (5V logic) with the **ESP32** (3.3V logic) is essential to prevent potential damage to the ESP32. Below is the wiring setup and explanation for the logic level shifter and other hardware components:
+Using a **logic level shifter** to safely interface the **T1000S** (5V logic) with the **ESP32** (3.3V logic) is essential to prevent potential damage to the ESP32. For GPIO reference read here https://randomnerdtutorials.com/esp32-pinout-reference-gpios/
+Below is the wiring setup and explanation for the logic level shifter and other hardware components:
 
 ---
 
