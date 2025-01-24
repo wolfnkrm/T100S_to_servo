@@ -47,14 +47,17 @@ Using a **logic level shifter** to safely interface the **T1000S** (5V logic) wi
 
 ---
 
-4. **I2C LCD and Keypad Connections**:
+4. **I2C Servo Driver PCA9685 (LCD and Keypad optional) Connections**:
 
 | Component     | ESP32 Pin          | Description          |
 |---------------|---------------------|----------------------|
+| **PCA SDA**   | GPIO 21             | I2C data             |
+| **PCA SCL**   | GPIO 22             | I2C clock            |
 | **LCD SDA**   | GPIO 21             | I2C data             |
 | **LCD SCL**   | GPIO 22             | I2C clock            |
 | **Keypad SDA**| GPIO 21             | I2C data             |
 | **Keypad SCL**| GPIO 22             | I2C clock            |
+| **VCC**       | 3.3 V               | power input for chip |
 | **GND**       | Common ground       | Shared with ESP32 and T1000S |
 
 ---
@@ -78,6 +81,7 @@ Using a **logic level shifter** to safely interface the **T1000S** (5V logic) wi
 | **T1000S VCC**   | 5V power source → HV of Logic Level Shifter            |
 | **ESP32 3.3V**   | → LV of Logic Level Shifter                            |
 | **ESP32 GND**    | Shared ground                                          |
+| **PCA9685 I2C**  | SDA → GPIO 21, SCL → GPIO 22                           |
 | **LCD I2C**      | SDA → GPIO 21, SCL → GPIO 22                           |
 | **Keypad I2C**   | SDA → GPIO 21, SCL → GPIO 22                           |
 
